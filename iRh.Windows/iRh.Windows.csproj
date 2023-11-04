@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26733F42-EEC6-44C0-8BFD-34E3101E4A7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>iRh.Windows</RootNamespace>
+    <AssemblyName>iRh.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Namotion.Reflection, Version=2.0.10.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\Namotion.Reflection.2.0.10\lib\net45\Namotion.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NJsonSchema, Version=10.6.10.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\packages\NJsonSchema.10.6.10\lib\net45\NJsonSchema.dll</HintPath>
+    </Reference>
+    <Reference Include="NJsonSchema.Extensions, Version=0.1.0.0, Culture=neutral, PublicKeyToken=e52fadf300daf456, processorArchitecture=MSIL">
+      <HintPath>..\packages\NJsonSchema.Extensions.0.1.0\lib\net45\NJsonSchema.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastros\core\AdicionalNoturno.cs" />
+    <Compile Include="Cadastros\core\Colaboradores.cs" />
+    <Compile Include="Cadastros\core\Detalhamento.cs" />
+    <Compile Include="Cadastros\core\DocumentoDeIdentificacao.cs" />
+    <Compile Include="Cadastros\core\Endereco.cs" />
+    <Compile Include="Cadastros\core\Estados.cs" />
+    <Compile Include="Cadastros\core\Ferias.cs" />
+    <Compile Include="Cadastros\core\HoraExtra100.cs" />
+    <Compile Include="Cadastros\core\HoraExtra50.cs" />
+    <Compile Include="Cadastros\core\Inss.cs" />
+    <Compile Include="Cadastros\core\Fgts.cs" />
+    <Compile Include="Cadastros\core\Irrf.cs" />
+    <Compile Include="Cadastros\core\Periculosidade.cs" />
+    <Compile Include="Cadastros\core\Pis.cs" />
+    <Compile Include="Cadastros\core\ValeTransporte.cs" />
+    <Compile Include="Cadastros\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalMdi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalMdi.Designer.cs">
+      <DependentUpon>PrincipalMdi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simuladores\frmBeneficioAdicionalNoturno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioAdicionalNoturno.Designer.cs">
+      <DependentUpon>frmBeneficioAdicionalNoturno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioFerias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioFerias.Designer.cs">
+      <DependentUpon>frmBeneficioFerias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioFgts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioFgts.Designer.cs">
+      <DependentUpon>frmBeneficioFgts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioHoraExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioHoraExtra.Designer.cs">
+      <DependentUpon>frmBeneficioHoraExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioPericulosidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioPericulosidade.Designer.cs">
+      <DependentUpon>frmBeneficioPericulosidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioPis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioPis.Designer.cs">
+      <DependentUpon>frmBeneficioPis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioSeguroDesemprego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioSeguroDesemprego.Designer.cs">
+      <DependentUpon>frmBeneficioSeguroDesemprego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioValeTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmBeneficioValeTransporte.Designer.cs">
+      <DependentUpon>frmBeneficioValeTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmDescontoInss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmDescontoInss.Designer.cs">
+      <DependentUpon>frmDescontoInss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmDescontoIrrf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmDescontoIrrf.Designer.cs">
+      <DependentUpon>frmDescontoIrrf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simuladores\frmDetalhamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simuladores\frmDetalhamento.Designer.cs">
+      <DependentUpon>frmDetalhamento.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cadastros\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalMdi.resx">
+      <DependentUpon>PrincipalMdi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Simuladores\frmBeneficioAdicionalNoturno.resx">
+      <DependentUpon>frmBeneficioAdicionalNoturno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioFerias.resx">
+      <DependentUpon>frmBeneficioFerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioFgts.resx">
+      <DependentUpon>frmBeneficioFgts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioHoraExtra.resx">
+      <DependentUpon>frmBeneficioHoraExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioPericulosidade.resx">
+      <DependentUpon>frmBeneficioPericulosidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioPis.resx">
+      <DependentUpon>frmBeneficioPis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioSeguroDesemprego.resx">
+      <DependentUpon>frmBeneficioSeguroDesemprego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmBeneficioValeTransporte.resx">
+      <DependentUpon>frmBeneficioValeTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmDescontoInss.resx">
+      <DependentUpon>frmDescontoInss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmDescontoIrrf.resx">
+      <DependentUpon>frmDescontoIrrf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simuladores\frmDetalhamento.resx">
+      <DependentUpon>frmDetalhamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo tela principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IRH ADICIONAL NOTURNO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH Inss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH Irrf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH vale transporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH seguro desemprego.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH Pis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IRH Periculosidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH Hora extra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH fgts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iRH ferias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IRH Colaborador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image%281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
